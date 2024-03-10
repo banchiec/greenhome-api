@@ -1,6 +1,6 @@
 const router = require('express').Router()
-const authRoutes = require('./auth.routes/index.auth.routes')
-const commentRoutes = require('./comments.routes/commentsRoutes')
+const authRoutes = require('./auth.routes')
+const commentRoutes = require('./comments.routes')
 
 router.use('/auth', authRoutes)
 router.use('/comments', commentRoutes)

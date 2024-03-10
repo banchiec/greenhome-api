@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "populate": "node database/populateDB.js",
     "initDB": "node database/initDB.js",
     "dev": "nodemon server.js"
   },
