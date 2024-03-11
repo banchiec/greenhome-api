@@ -2,14 +2,14 @@
   "name": "new",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "populate": "node database/populateDB.js",
     "initDB": "node database/initDB.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon build/server.js nodemon tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Iván Espinoza Condori",
   "license": "ISC",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
@@ -28,6 +28,7 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/node": "^20.11.25",
     "nodemon": "^2.0.16",
     "prettier": "2.6.2"
   }

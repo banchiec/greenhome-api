@@ -31,13 +31,7 @@ require('dotenv').config()
 
 const {PORT} = process.env
 
-// const app = express()
-
-const app = require('./src/app')
-
-// app.use(fileUpload())
-// app.use(express.static('uploads'))
-// app.use(express.json())
+const app = require('./app')
 
 app.use(
   cors({
@@ -48,19 +42,3 @@ app.use(
 app.listen(`${PORT}`, () => {
   console.log(`Server listening on http://localhost:${process.env.PORT}`)
 })
-
-// app.get('/profile', validateAuth, getUserInfo)
-// app.get('/feed', selectLastPublications)
-// app.post('/posts', validateAuth, createPhotos)
-// app.patch('/editprofile', validateAuth, editUser)
-
-// /* Comments */
-// app.get('/comments/:commentId', getCommentById)
-// app.post('/comments/:photoId', validateAuth, createComment)
-// app.get('/comments', getComments)
-// app.get('/photoComments/:photoId', getCommentByPhotoId)
-
-// /* Likes */
-// app.post('/likephoto/:photo_id', validateAuth, Like)
-// app.get('/photoLikes/:photoId', getLikesByPhotoId)
-// app.get('/likes/:photo_id/checkLike', validateAuth, checkUserLike)
