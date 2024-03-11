@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+		"target": "ES2022",
+    "module": "CommonJS",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+		"strict": true,
+		"moduleDetection": "force",
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"sourceMap": true,
+		"esModuleInterop": true,
+    "outDir": "build",
+  },
+	"paths": {
+		"@helpers/*": ["src/helpers/*"],
+    "@controllers/*": ["src/controllers/*"],
+    "@repositories/*": ["src/repositories/*"],
+    "@routes/*": ["src/routes/*/**/***"],
+    "@schemas/*": ["src/schemas/*"],
+    "@midlewares/*": ["src/midlewares/*"],
+    "@database/*": ["src/database/*"],
+    "@docs/*": ["src/docs/*"],
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "**/__tests__/*", "**/?(*.)spec.*"]
+}
