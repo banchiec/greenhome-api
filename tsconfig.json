@@ -1,27 +1,30 @@
 {
   "compilerOptions": {
-		"target": "ES2022",
     "module": "CommonJS",
+		// Import non-ES modules as default import
+		"esModuleInterop": true,
+		// Target latest version of ECMAScript
+		"target": "ES2022",
+		// Process & infer types from .js files
+		"allowJs": false,
+		// Enable strictNullchecks & noImplicitAny
+		"strictNullChecks": true,
     "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
 		"strict": true,
+		"strictFunctionTypes": false,
+		"noImplicitThis": false,
 		"moduleDetection": "force",
+    "preserveConstEnums": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
+		// Search under node_modules for non-relative imports
+		"moduleResolution": "Node",
+		// Import .json files
+		"resolveJsonModule": true,
 		"sourceMap": true,
-		"esModuleInterop": true,
     "outDir": "build",
-  },
-	"paths": {
-		"@helpers/*": ["src/helpers/*"],
-    "@controllers/*": ["src/controllers/*"],
-    "@repositories/*": ["src/repositories/*"],
-    "@routes/*": ["src/routes/*/**/***"],
-    "@schemas/*": ["src/schemas/*"],
-    "@midlewares/*": ["src/midlewares/*"],
-    "@database/*": ["src/database/*"],
-    "@docs/*": ["src/docs/*"],
+    "baseUrl": "/src",
+		"paths": { "*": ["node_modules/*", "src/types/*"]},
 	},
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules", "**/__tests__/*", "**/?(*.)spec.*"]

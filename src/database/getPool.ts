@@ -1,13 +1,16 @@
-require('dotenv').config()
-const mysql = require('mysql2/promise')
+import  mysql from 'mysql2/promise';
+import { config } from 'dotenv'
+// require('dotenv').config()
+// const mysql = require('mysql2/promise')
+config()
 
 const {
-  DATABASE_HOST,
-  DATABASE_PORT,
-  DATABASE_USER,
-  DATABASE_PASSWORD,
-  DATABASE_NAME,
-} = process.env
+  DB_HOST,
+  DB_PORT,
+  DB_USER,
+  DB_USER_PWD,
+  DB_NAME,
+}: any= process.env
 
 let pool: any
 
@@ -15,11 +18,11 @@ const getPool = () => {
   /** Si no hay un pool ya creado, llamamos a createPool con los datos requeridos para crear uno */
   if (!pool) {
     pool = mysql?.createPool({
-      host: DATABASE_HOST,
-      port: DATABASE_PORT,
-      user: DATABASE_USER,
-      password: DATABASE_PASSWORD,
-      database: DATABASE_NAME,
+      host: "localhost",
+      port: 3306,
+      user: "root",
+      password: "Loquitas11031$",
+      database: "shop_example",
       timezone: 'Z',
       connectionLimit: 10,
     })
@@ -29,4 +32,4 @@ const getPool = () => {
   return pool
 }
 
-module.exports = getPool
+export default getPool

@@ -1,4 +1,4 @@
-const getPool = require('database/getPool')
+const getPool = require('../../database/getPool')
 
 const selectCommentById = async (commentId: any) => {
   const pool = getPool()

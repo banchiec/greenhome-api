@@ -1,6 +1,7 @@
 
-const generateError = require("./helpers/generateError")
-const selectUserGallery = require('../../repositories/users/selectUserGallery')
+const generateError = require("../../helpers/generateError")
+const selectUserGallery = require("../../repositories/users/selectUserGallery")
+// const selectUserGallery = require('../../repositories/users/selectUserGallery')
 
 const getUserGalleryImages = async (req: any, res: any, next: any) => {
   try {

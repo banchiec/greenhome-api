@@ -1,7 +1,7 @@
-const express = require('express')
-const appExpress = express()
+import express from  'express';
+const app= express()
 const approutes = require('./routes/index.routes')
 
-appExpress.use('/api', approutes)
+app.use('/api', approutes)
 
-module.exports = appExpress
+export default app

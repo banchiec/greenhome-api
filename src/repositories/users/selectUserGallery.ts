@@ -1,5 +1,5 @@
 const getPool = require('../../database/getPool')
-const selectUserGallery = async (id) => {
+const selectUserGallery = async (id: number) => {
   const pool = getPool()
   const [user] = await pool.query(
     `SELECT ph.name_photo, ph.id, u.username, u.email, u.avatar FROM photo ph

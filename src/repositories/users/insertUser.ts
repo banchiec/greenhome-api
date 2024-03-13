@@ -1,6 +1,12 @@
 const getPool = require('../../database/getPool')
+interface userType {
+  username: string
+  email: string,
+  avatarName: string
+  encryptedPassword: string
+}
 
-const insertUser = async ({email, encryptedPassword, username, avatarName}) => {
+const insertUser = async ({email, encryptedPassword, username, avatarName}: userType) => {
   const pool = getPool()
   const [{insertId}] = await pool.query(
     'INSERT INTO users (username, email, passwd, avatar) VALUES (?, ?, ?, ? )',
