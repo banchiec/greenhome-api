@@ -1,9 +1,7 @@
 import  mysql from 'mysql2/promise';
 import { config } from 'dotenv'
-// require('dotenv').config()
-// const mysql = require('mysql2/promise')
-config()
 
+config()
 const {
   DB_HOST,
   DB_PORT,
@@ -21,7 +19,7 @@ const getPool = () => {
       host: "localhost",
       port: 3306,
       user: "root",
-      password: "Loquitas11031$",
+      password: "Loquitasmysql11031$",
       database: "shop_example",
       timezone: 'Z',
       connectionLimit: 10,

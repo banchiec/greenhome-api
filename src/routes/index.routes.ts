@@ -1,10 +1,10 @@
-const router = require('express').Router()
-const authRoutes = require('./auth.routes')
-const commentRoutes = require('./comments.routes')
+import express from 'express';
+const appRoute= express.Router()
+// const authRoutes = require('./auth.routes')
+// const commentRoutes = require('./comments.routes')
+import { router as routerComments } from "./comments.routes/index"
 
-router.use('/auth', authRoutes)
-router.use('/comments', commentRoutes)
+// router.use('/auth', authRoutes)
+appRoute.use('/comments', routerComments)
 
-module.exports = router
-
-export {}
+export default appRoute 

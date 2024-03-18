@@ -4,9 +4,10 @@
   "description": "",
   "main": "build/index.js",
   "scripts": {
-    "populate": "node database/populateDB.js",
+    "populate": "node build/database/populateDB.js",
     "initDB": "node build/database/initDB.js",
-    "dev": "nodemon build/server.js"
+    "tsc": "nodemon tsc",
+    "dev": "nodemon build/server.js && nodemon && npm run tsc"
   },
   "keywords": [],
   "author": "Iván Espinoza Condori",

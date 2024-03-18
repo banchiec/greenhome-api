@@ -1,4 +1,4 @@
-const getPool = require('../../database/getPool')
+import getPool from "../../database/getPool"
 
 const selectComments: any = async () => {
   const pool = getPool()
@@ -10,4 +10,4 @@ const selectComments: any = async () => {
   )
   return comment
 }
-module.exports = selectComments
+export default selectComments

@@ -1,5 +1,5 @@
-const cors = require('cors')
-const fileUpload = require('express-fileupload')
+// const cors = require('cors')
+// const fileUpload = require('express-fileupload')
 // const getCommentById = require('./controllers/comments/getCommentById')
 // const getComments = require('./controllers/comments/getComments')
 // const getCommentByPhotoId = require('./controllers/comments/getCommentsByPhotoId')
@@ -8,7 +8,7 @@ const fileUpload = require('express-fileupload')
 // const createComment = require('./controllers/comments/createComment')
 // const {Like} = require('./controllers/likes')
 
-require('dotenv').config()
+// require('dotenv').config()
 // const {
 //   createPhotos,
 //   selectLastPublications,
@@ -29,25 +29,27 @@ require('dotenv').config()
 // const getPhotoById = require('./controllers/photos/getPhotoById')
 // const checkUserLike = require('./repositories/likes/checkUserLike')
 
-const {PORT} = process.env
+// const {PORT} = process.env
+// console.log(PORT)
 
 // const app = express()
 
-const app = require('./src/app')
+// const app = require('./src/app')
 
 // app.use(fileUpload())
 // app.use(express.static('uploads'))
 // app.use(express.json())
 
-app.use(
-  cors({
-    origin: ['http://localhost:3000'],
-  })
-)
+// app.use(
+//   cors({
+//     origin: ['http://localhost:3000'],
+//   })
+// )
 
-app.listen(`${PORT}`, () => {
-  console.log(`Server listening on http://localhost:${process.env.PORT}`)
-})
+// console.log(process.env.PORT)
+// app.listen(5005, () => {
+//   console.log(`Server listening on http://localhost:5005}`)
+// })
 
 // app.get('/profile', validateAuth, getUserInfo)
 // app.get('/feed', selectLastPublications)

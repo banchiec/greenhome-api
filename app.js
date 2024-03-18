@@ -1,7 +1,7 @@
-const express = require('express')
-const app = express()
-const approutes = require('./routes/index.routes')
+// const express = require('express')
+// const app = express()
+// const approutes = require('./routes/index.routes')
 
-app.use('/api', approutes)
+// app.use('/api', approutes)
 
-module.exports = app
+// module.exports = app

@@ -1,6 +1,7 @@
-const getPool = require('./getPool')
-require('dotenv').config
+import getPool from "./getPool"
+import { config } from "dotenv" 
 
+config()
 const populateDB = async () => {
   try {
     const pool = getPool()

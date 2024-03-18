@@ -1,7 +1,7 @@
 import express from  'express';
+import appRoute from './routes/index.routes';
 const app= express()
-const approutes = require('./routes/index.routes')
 
-app.use('/api', approutes)
+app.use('/api', appRoute)
 
 export default app

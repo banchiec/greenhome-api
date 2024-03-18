@@ -1,4 +1,6 @@
-const selectComments = require('../../repositories/comments/selectComments')
+// const selectComments = require('../../repositories/comments/selectComments')
+
+import selectComments from "../../repositories/comments/selectComments"
 
 const getComments = async (req: any, res: any, next: any) => {
   try {
@@ -10,4 +12,6 @@ const getComments = async (req: any, res: any, next: any) => {
   }
 }
 
-module.exports = getComments
+export default getComments
+
+// module.exports = getComments

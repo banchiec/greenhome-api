@@ -2,8 +2,6 @@
 import getPool from  './getPool'
 import { config } from 'dotenv'
 
-
-
 config()
 const initDB = async () => {
   try {
@@ -20,7 +18,8 @@ const initDB = async () => {
       avatar VARCHAR(100) NULL, 
       passwd VARCHAR(100) NOT NULL
     );
-`)
+
+    `)
     await pool.query(`
     CREATE TABLE IF NOT EXISTS photo(
       id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
