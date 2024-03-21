@@ -1,17 +1,21 @@
-const getPool = require('../../database/getPool')
+import { PrismaClient } from "@prisma/client"
+
 interface userType {
-  username: string
+  name: string
   email: string,
-  avatarName: string
+  role?: string
   encryptedPassword: string
 }
 
-const insertUser = async ({email, encryptedPassword, username, avatarName}: userType) => {
-  const pool = getPool()
-  const [{insertId}] = await pool.query(
-    'INSERT INTO users (username, email, passwd, avatar) VALUES (?, ?, ?, ? )',
-    [username, email, encryptedPassword, avatarName]
-  )
-  return insertId
+const insertUser = async (props: userType) => {
+  const {email, name, role } = props
+  const prismaCliente = new PrismaClient()
+
+  prismaCliente.user.create({
+    data:{
+      name: "Jhon Doe",
+      email: "jhondoe@gmail.com",
+    }
+  }).then((data) => console.log(data)).catch((error)=>console.log(error))
 }
-module.exports = insertUser
+export default insertUser
